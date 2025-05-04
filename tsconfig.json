@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    // Target modern JavaScript environments
+    "target": "ES2016", // Or ES2020, etc. depending on your target environments
+
+    // Module system - ESNext is good for libraries used with bundlers
+    "module": "ESNext",
+    "moduleResolution": "node", // Or "Bundler" if using TS 5+ and modern bundlers
+
+    // Output directory for compiled JavaScript
+    "outDir": "./dist",
+
+    // Source directory for your TypeScript files
+    "rootDir": "./src",
+
+    // Generate declaration files (.d.ts) - VERY IMPORTANT for library consumers
+    "declaration": true,
+    "declarationMap": true, // Optional: helps IDEs map types back to source TS
+    "sourceMap": true, // Generate source maps for debugging
+
+    // Strict type-checking options (recommended)
+    "strict": true,
+    "noImplicitAny": true, // etc.
+
+    // Interoperability with different module types
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // Skip type checking of declaration files (speeds up compilation)
+    "skipLibCheck": true
+  },
+  // Specify which files to include in compilation
+  "include": ["src/**/*", "jest.config.js"],
+  // Specify files/patterns to exclude
+  "exclude": ["node_modules", "dist"]
+}
