@@ -19,7 +19,7 @@ function parseGrade(gradeText: string | null): {
   achieved: number | null;
   total: number | null;
 } {
-  const result = { achieved: null, total: null };
+  const result = { achieved: 0.0, total: 0.0 };
   if (!gradeText) return result;
 
   // Regex to find numbers like "1.00 out of 1.00" or just "1.00"
@@ -41,7 +41,7 @@ function parseSummaryGrade(gradeText: string | null): {
   total: number | null;
   percentage: number | null;
 } {
-  const result = { score: null, total: null, percentage: null };
+  const result = { score: 0.0, total: 0.0, percentage: 0.0 };
   if (!gradeText) return result;
 
   // Regex to find numbers like "32.05 out of 40.00 (80.13%)"
